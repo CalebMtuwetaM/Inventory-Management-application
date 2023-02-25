@@ -1,1 +1,29 @@
+import Inventorymanagement
+
+#add items
+Inventorymanagement.add_item("pen","blue bic",20,30,"checked in")
+
+#giving items variables
+item1 = Inventorymanagement.items[0]
+
+#to remove an item
+#print(Inventorymanagement.item_remove(item1["item_id"]))
+
+#to list all the items
+#print(Inventorymanagement.items_list())
+
+#to check out an item
+#print(Inventorymanagement.item_checkout(item1["item_id"]))
+
+#to check in an item
+#print(Inventorymanagement.item_check_in(item1["item_id"]))
+
+#to view an item
+#print(Inventorymanagement.item_view(item1["item_id"]))
+
+#to search an item by name
+#print(Inventorymanagement.item_search_by_name("pen"))
+
+#to search an item by the item description
+#print(Inventorymanagement.item_search_by_description("bic"))
 
