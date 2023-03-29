@@ -32,3 +32,6 @@ print(Inventorymanagement.find_item_by_ID(item1["item_id"]))
 
 #to export the inventory csv file
 Inventorymanagement.export_items("inventory.csv")
+
+#to import the inventory csv file
+Inventorymanagement.import_items("inventory.csv")
