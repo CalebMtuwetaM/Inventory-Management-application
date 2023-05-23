@@ -1,1 +1,2 @@
-Blue bic,checked in
+item_name,item_id,item_description,total_number,cost_per_item,date_added,item_status
+pen,3034e310-172c-45dd-a746-f1e857fa6dab,blue bic,20,30,2023-05-23 16:47:56.723053,checked in

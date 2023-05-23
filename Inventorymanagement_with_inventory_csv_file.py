@@ -38,29 +38,29 @@ def add_item(name,description,number,cost,status):
     # item name cannot be empty
     for item in items:
         if name == "":
-            raise ("item name cannot be empty")
+            raise (ValueError)
     # item description cannot be empty
     for item in items:
         if description == "":
-            raise ("item description cannot be empty")
+            raise (ValueError)
     # item number cannot be empty
     for item in items:
         if number == "":
-            raise ("item number cannot be empty")
+            raise (ValueError)
     # item cost cannot be empty
     for item in items:
         if cost == "":
-            raise ("item cost cannot be empty")
+            raise (ValueError)
     #validate the number to only allow integers for item in items:
     if not isinstance(number, int):
-        raise ("number should be an integer")
+        raise (ValueError)
     # validate the cost to only allow integers for item in items:
     if not isinstance(cost, int):
-        raise ("cost should be an integer")
+        raise (ValueError)
     #validate the state if its only "checked in or checked out"
     for item in items:
         if status != "checked in " or "checked out":
-            raise("status can only be checked in or checked out")
+            raise(ValueError)
     #item properties
     item = {
         "item_name": name,
@@ -91,7 +91,7 @@ def item_remove(item_id):
     is_removed = False
     item_is_found,item_ = find_item_by_ID(item_id)
     if not item_is_found:
-        raise("item with the itme id not found")
+        raise(ValueError)
     items.remove(item_)
     is_removed = True
     if is_removed == True:
@@ -106,7 +106,7 @@ def item_checkout(item_id):
     is_checked_out = False
     item_is_found,item_ = find_item_by_ID(item_id)
     if not item_is_found:
-        raise("item with item id not found")
+        raise(ValueError)
     items.remove(item_)
     is_checked_out = True
     # update the status of the item
